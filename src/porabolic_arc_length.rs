@@ -4,7 +4,7 @@ fn len_curve(n: i32) -> f64 {
 
     for i in 0..n {
         let if64 = i as f64;
-        let t = nf64.powi(2) + 4f64 * if64.powi(2) +4f64 * if64 + 1f64;
+        let t = nf64.powi(2) + 4f64 * if64.powi(2) + 4f64 * if64 + 1f64;
         sum += t.sqrt();
     }
 
