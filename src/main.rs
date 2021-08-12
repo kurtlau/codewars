@@ -10,6 +10,8 @@ mod enough;
 mod prize_draw;
 mod reverse_or_rotate;
 mod expand_form;
+mod transform_to_prime;
+mod square_decompose;
 
 fn main() {
     println!("Hello, world!");
