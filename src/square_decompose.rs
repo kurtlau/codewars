@@ -1,35 +1,22 @@
-fn decompose_recursive(remain: i64, max: i64, result: &mut Vec<i64>) -> bool {
+fn decompose_recursive(target: i64, max: i64) -> Option<Vec<i64>> {
     for i in (1..max).rev() {
-        let left = remain - i.pow(2u32);
+        let remain = target - i.pow(2u32);
 
-        if left == 0 {
-            println!("{} fit", &i);
-            result.push(i);
-            return true; //found
-        } else if left > 0 {
-            result.push(i);
-
-            if decompose_recursive(left, i, result) {
-                return true;
-            } else {
-                println!("pop {}", &i);
-                result.pop();
+        if remain == 0 {
+            return Some([i].to_vec());
+        } else if remain > 0 {
+            if let Some(mut result) = decompose_recursive(remain, i) {
+                result.push(i);
+                return Some(result);
             }
         }
     }
 
-    false
+    None
 }
 
 fn decompose(n: i64) -> Option<Vec<i64>> {
-    let mut result: Vec<i64> = vec![];
-
-    if decompose_recursive(n.pow(2u32), n, &mut result) {
-        result.reverse();
-        return Some(result);
-    }
-
-    None
+    decompose_recursive(n.pow(2u32), n)
 }
 
 #[cfg(test)]
