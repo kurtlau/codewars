@@ -14,6 +14,7 @@ mod transform_to_prime;
 mod square_decompose;
 mod the_same;
 mod list_squared;
+mod fib_product;
 
 fn main() {
     println!("Hello, world!");
