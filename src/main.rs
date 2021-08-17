@@ -13,6 +13,7 @@ mod expand_form;
 mod transform_to_prime;
 mod square_decompose;
 mod the_same;
+mod list_squared;
 
 fn main() {
     println!("Hello, world!");
