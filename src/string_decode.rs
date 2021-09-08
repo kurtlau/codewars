@@ -12,21 +12,17 @@ fn decode(word: &str) -> String {
 
             '|' => parse_count = false,
 
-            ']' => {
-                if let Some(mut top) = stack.pop() {
-                    top.1.push_str(curr.1.repeat(curr.0).as_str());
-                    std::mem::swap(&mut curr, &mut top);
-                }
-            }
+            ']' => if let Some(mut top) = stack.pop() {
+                top.1.push_str(curr.1.repeat(curr.0).as_str());
+                std::mem::swap(&mut curr, &mut top);
+            },
 
-            ch => {
-                if parse_count {
-                    let d: usize = ch.to_digit(10).unwrap() as usize;
-                    curr.0 = curr.0 * 10 + d;
-                } else {
-                    curr.1.push(ch);
-                }
-            }
+            ch => if parse_count {
+                let d: usize = ch.to_digit(10).unwrap() as usize;
+                curr.0 = curr.0 * 10 + d;
+            } else {
+                curr.1.push(ch);
+            },
         }
     }
 
