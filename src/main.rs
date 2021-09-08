@@ -17,6 +17,7 @@ mod list_squared;
 mod fib_product;
 mod string_decode;
 mod next_bigger_number;
+mod range_extract;
 
 fn main() {
     println!("Hello, world!");
