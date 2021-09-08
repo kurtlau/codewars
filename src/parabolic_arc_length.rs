@@ -11,11 +11,10 @@ fn len_curve(n: i32) -> f64 {
     sum / nf64.powi(2)
 }
 
-use float_eq::float_eq;
-
 #[cfg(test)]
 mod tests {
     use super::*;
+    use float_eq::float_eq;
 
     fn assert_float_equals(actual: f64, expected: f64) {
         let merr = 1.0e-6;

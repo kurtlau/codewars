@@ -15,6 +15,7 @@ mod square_decompose;
 mod the_same;
 mod list_squared;
 mod fib_product;
+mod string_decode;
 
 fn main() {
     println!("Hello, world!");
