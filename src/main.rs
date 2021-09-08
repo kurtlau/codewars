@@ -16,6 +16,7 @@ mod the_same;
 mod list_squared;
 mod fib_product;
 mod string_decode;
+mod next_bigger_number;
 
 fn main() {
     println!("Hello, world!");
