@@ -18,6 +18,7 @@ mod fib_product;
 mod string_decode;
 mod next_bigger_number;
 mod range_extract;
+mod lost;
 
 fn main() {
     println!("Hello, world!");
