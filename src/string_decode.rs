@@ -18,8 +18,7 @@ fn decode(word: &str) -> String {
             },
 
             ch => if parse_count {
-                let d: usize = ch.to_digit(10).unwrap() as usize;
-                curr.0 = curr.0 * 10 + d;
+                curr.0 = curr.0 * 10 + ch.to_digit(10).unwrap() as usize;
             } else {
                 curr.1.push(ch);
             },
