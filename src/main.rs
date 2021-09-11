@@ -19,6 +19,7 @@ mod string_decode;
 mod next_bigger_number;
 mod range_extract;
 mod lost;
+mod integer_partition;
 
 fn main() {
     println!("Hello, world!");
