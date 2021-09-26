@@ -20,6 +20,7 @@ mod next_bigger_number;
 mod range_extract;
 mod lost;
 mod integer_partition;
+mod look_and_say;
 
 fn main() {
     println!("Hello, world!");
