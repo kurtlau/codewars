@@ -21,6 +21,7 @@ mod range_extract;
 mod lost;
 mod integer_partition;
 mod look_and_say;
+mod factorial;
 
 fn main() {
     println!("Hello, world!");
