@@ -1,5 +1,5 @@
 use std::cmp::max;
-
+#[allow(dead_code)]
 fn mx_dif_lg(a1: Vec<&str>, a2: Vec<&str>) -> i32 {
     if a1.is_empty() || a2.is_empty() {
         return -1;

@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 fn open_or_senior(data: Vec<(i32, i32)>) -> Vec<String> {
     data.iter()
         .map(|&(age, handicap)| {

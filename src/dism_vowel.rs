@@ -1,5 +1,5 @@
 use std::collections::HashSet;
-
+#[allow(dead_code)]
 fn disemvowel(s: &str) -> String {
     let vowel = vec!['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
         .into_iter()

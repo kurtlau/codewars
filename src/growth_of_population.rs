@@ -15,8 +15,9 @@ impl Iterator for Population {
     }
 }
 
+#[allow(dead_code)]
 fn nb_year(p0: i32, percent: f64, aug: i32, p: i32) -> i32 {
-    let mut population = Population {
+    let population = Population {
         p0: p0,
         percent: percent,
         aug: aug,

@@ -29,6 +29,7 @@ mod even_or_odd;
 mod growth_of_population;
 mod max_length_diff;
 mod mumbling;
+mod categorize_member;
 
 fn main() {
     println!("Hello, world!");

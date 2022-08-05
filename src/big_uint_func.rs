@@ -1,16 +1,20 @@
 use num::bigint::BigUint;
 use num::bigint::ToBigUint;
-use num::traits::{One, Zero};
 
 fn func(a: BigUint, b: BigUint, n: BigUint) -> BigUint {
-    if n == BigUint::zero() { return b; }
-    if n == BigUint::one() { return a + b; }
+    if n == 0.to_biguint().unwrap() { return b; }
+    if n == 1.to_biguint().unwrap() { return a + b; }
 
-    func(a + b.clone(), b, (n + 1.to_biguint().unwrap()) / 2.to_biguint().unwrap())
+    if n.clone() % 2.to_biguint().unwrap() != 0.to_biguint().unwrap() {
+        func(a.clone(), a + b, (n - 1.to_biguint().unwrap()) / 2.to_biguint().unwrap())
+    }
+    else {
+        func(a + b.clone(), b,  n / 2.to_biguint().unwrap())
+    }
 }
 
 fn fusc(n: BigUint) -> BigUint {
-    func(BigUint::one(), BigUint::zero(), n)
+    func(1.to_biguint().unwrap(), 0.to_biguint().unwrap(), n)
 }
 
 #[cfg(test)]

@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 fn accum(s: &str) -> String {
     s.chars()
         .enumerate()
