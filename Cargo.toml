@@ -8,3 +8,5 @@ edition = "2018"
 
 [dependencies]
 float_eq = "^0.6.1"
+num = "0.4.0"
+num-bigint = "0.4.3"

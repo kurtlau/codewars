@@ -22,6 +22,13 @@ mod lost;
 mod integer_partition;
 mod look_and_say;
 mod factorial;
+mod binary_by_level;
+mod big_uint_func;
+mod dism_vowel;
+mod even_or_odd;
+mod growth_of_population;
+mod max_length_diff;
+mod mumbling;
 
 fn main() {
     println!("Hello, world!");
