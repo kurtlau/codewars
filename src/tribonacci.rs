@@ -23,6 +23,7 @@ impl Iterator for Tribonacci {
     }
 }
 
+#[allow(dead_code)]
 fn tribonacci(signature: &[f64; 3], n: usize) -> Vec<f64> {
     Tribonacci::new(signature).into_iter().take(n).collect()
 }
