@@ -35,6 +35,7 @@ mod tribonacci;
 mod unique_in_order;
 mod vowel_count;
 mod word_scoring;
+mod hamming;
 
 fn main() {
     println!("Hello, world!");
