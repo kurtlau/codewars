@@ -10,7 +10,7 @@ mod expand_form;
 mod factorial;
 mod fib_product;
 mod growth_of_population;
-mod how_many_iii;
+mod hamming;
 mod integer_partition;
 mod last_digital;
 mod list_squared;
@@ -21,6 +21,7 @@ mod mid_element;
 mod mumbling;
 mod next_bigger_number;
 mod parabolic_arc_length;
+mod postfix;
 mod prize_draw;
 mod range_extract;
 mod reverse_or_rotate;
@@ -35,7 +36,6 @@ mod tribonacci;
 mod unique_in_order;
 mod vowel_count;
 mod word_scoring;
-mod hamming;
 
 fn main() {
     println!("Hello, world!");
