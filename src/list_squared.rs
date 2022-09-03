@@ -2,16 +2,16 @@ fn squared(n: u64) -> Option<(u64, u64)> {
     let sqrt_n = (n as f64).sqrt() as u64;
 
     let sum = (1..=sqrt_n)
-        .map(|i| {
+        .filter_map(|i| {
             let div = n / i;
             if div * i == n {
                 if div == i {
-                    i.pow(2)
+                    Some(i.pow(2))
                 } else {
-                    i.pow(2) + div.pow(2)
+                    Some(i.pow(2) + div.pow(2))
                 }
             } else {
-                0u64
+                None
             }
         })
         .sum();
@@ -24,7 +24,7 @@ fn squared(n: u64) -> Option<(u64, u64)> {
 }
 
 fn list_squared(m: u64, n: u64) -> Vec<(u64, u64)> {
-    (m..=n).filter_map(|i| squared(i)).collect()
+    (m..=n).filter_map(squared).collect()
 }
 
 #[cfg(test)]

@@ -1,11 +1,11 @@
 fn product_fib(prod: u64) -> (u64, u64, bool) {
-    let mut fibon = (0u64, 1u64);
+    let mut fib = (0u64, 1u64);
 
-    while fibon.0 * fibon.1 < prod {
-        fibon = (fibon.1, fibon.0 + fibon.1);
+    while fib.0 * fib.1 < prod {
+        fib = (fib.1, fib.0 + fib.1);
     }
 
-    (fibon.0, fibon.1, fibon.0 * fibon.1 == prod)
+    (fib.0, fib.1, fib.0 * fib.1 == prod)
 }
 
 #[cfg(test)]

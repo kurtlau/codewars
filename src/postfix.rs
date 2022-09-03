@@ -25,7 +25,6 @@ fn to_postfix(infix: &str) -> String {
     for ch in infix.chars() {
         if ch.is_numeric() {
             out.push(ch);
-            // println!("push: {}", ch);
         } else if stack.is_empty() || ch == '(' {
             stack.push(ch);
         } else if ch == ')' {
@@ -35,27 +34,22 @@ fn to_postfix(infix: &str) -> String {
                 }
 
                 out.push(op);
-                // println!("push: {}", op);
             }
         } else {
-            while let Some(op) = stack.pop() {
+            while let Some(&op) = stack.last() {
                 if op == '(' {
-                    stack.push(op);
                     break;
                 }
 
                 if op_priority(op) < op_priority(ch) {
-                    stack.push(op);
                     break;
                 }
 
-                if op_priority(op) == op_priority(ch) && is_right_ass(op) {
-                    stack.push(op);
+                if op_priority(op) == op_priority(ch) && is_right_ass(ch) {
                     break;
                 }
 
-                out.push(op);
-                // println!("push: {}", op);
+                out.push(stack.pop().unwrap());
             }
 
             stack.push(ch);
@@ -64,7 +58,6 @@ fn to_postfix(infix: &str) -> String {
 
     for ch in stack.into_iter().rev() {
         out.push(ch);
-        // println!("push: {}", ch);
     }
 
     out
